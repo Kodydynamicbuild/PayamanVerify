@@ -1,10 +1,12 @@
 {
   "builds": [
-    { "src": "verify.py", "use": "@vercel/python" },
+    { "src": "login.py", "use": "@vercel/python" },
+    { "src": "callback.py", "use": "@vercel/python" },
     { "src": "index.html", "use": "@vercel/static" }
   ],
   "routes": [
-    { "src": "/api/verify", "dest": "/verify.py" },
+    { "src": "/login", "dest": "/login.py" },
+    { "src": "/callback", "dest": "/callback.py" },
     { "src": "/", "dest": "/index.html" }
   ]
 }
